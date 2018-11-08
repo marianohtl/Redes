@@ -1,0 +1,81 @@
+vi -> editor de textos padrão Linux
+
+comando:
+vi nome_arquivo
+
+i -> ativa o modo inserção à partir do cursor
+<esc><u> -> desfazer
+a -> ativa o modo inserção depois do cursor
+<esc><u> -> desfazer
+o -> pula 1 linha e ativa o modo inserção
+
+<esc><:> -> Ativar o menu de comandos
+q! -> sair sem salvar
+w -> salvar
+wq -> salvar e sair
+set number (numerar as linhas)
+
+______________________________________________________
+Comandos básicos:
+
+cat arquivo -> exibe o conteúdo de um arquivo
+cp arquivo -> faz uma cópia do arquivo
+rm arquivo -> apagar um arquivo
+history -> exibe os 1000 últimos comandos digitados
+history | less -> rolagem da página
+reset (recuperar o terminal)
+______________________________________________________
+teclas de atalho
+<tab> (completa o comando)
+setas (repete o último comando)
+
+_______________________________________________________
+
+Configurando um ip fixo no servidor Linux:
+
+caminho:
+cd /etc/network
+vi interfaces
+# comentar
+# allow-hotplug enp0s3
+# iface enp0s3 inet dhcp
+ 
+# configuração manual do ip
+allow-hotplug enp0s3
+iface enp0s3 inet static
+address 192.168.0.100
+netmask 255.255.255.0
+gateway 192.168.0.1
+network 192.168.0.0
+broadcast 192.168.0.255
+dns-nameservers 8.8.8.8 8.8.4.4
+
+_______________________________________________
+Instalação de pacotes no Linux (debian)
+apt-get update (atualizar o repositório)
+apt-get install nome do pacote (atualizar um pacote)
+apt-get remove nome do pacote (remover um pacote)
+Exemplos:
+apt-get install w3m
+apt-get install ninvaders
+apt-get remove w3m
+apt-get remove ninvaders
+apt-get moo
+_____________________________________________
+Pós instalação do servidor:
+apt-get install vim (deixar o vi mais amigável)
+
+#Personalizar tela de login
+apt-get install linuxlogo (personalizar o login)
+cd /etc
+ls issue* (issue -> script da tela de login)
+cp issue issue.bkp
+cat issue.linuxlogo > issue ( > sobrescrever)
+
+#Personalizar mensagem de boas vindas
+cd /etc
+cp motd motd.bkp
+rm motd
+vi motd
+Bem vindo!
+salvar,sair e reiniciar o servidor

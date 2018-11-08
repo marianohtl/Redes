@@ -1,0 +1,55 @@
+Servidor de banco de dados:
+
+Atividade individual:
+- Criar um novo servidor Linux (debian 9.5)
+- Fixar o IP (mesmo do servidor WEB)
+- Criar um acesso remoto ssh
+- Personalizar a tela de login e mensagem de boas vindas
+- Aumentar a resolução para 800x600
+- Instalar um wallpaper no grub (mysql1 ou mysql2)
+
+Instalação e configuração do SGDB MySQL da Oracle n o debian
+
+Material de apoio:
+https://youtu.be/A_37jwPdH-Q
+https://youtu.be/5Ge96agotPU
+
+Passo 1: Obter o link para atualizar o repositório debian
+wget https://dev.mysql.com/get/mysql-apt-config_0.8.10-1_all.deb
+
+Passo 2: Instalar o pacote:
+dpkg -i mysql-apt-config_0.8.10-1_all.deb
+### escolher a versão mysql-5.7
+### não instalar tools e conectors
+
+Passo 3: IMPORTANTE !!!
+Atualizar o repositório
+apt-get update
+
+Passo 4: Instalar o mysql:
+apt-get install mysql-server
+systemctl status mysql
+
+Passo 5: Configurar acesso remoto
+### Configurar o usuário
+mysql -u root -p
+<ctrl><l> -> limpar a tela
+show databases;
+create database teste;
+create database dbinfox;
+select user,host from mysql.user;
+grant all privileges on *.* to root@'%' identified by '123@senac';
+flush privileges;
+
+### Configurar o serviço no Linux
+cd /etc/mysql/mysql.conf.d
+cp mysqld.cnf mysqld.cnf.bkp
+vi mysqld.cnf
+28 bind-address = *
+salvar, sair
+systemctl restart mysql
+
+
+
+
+

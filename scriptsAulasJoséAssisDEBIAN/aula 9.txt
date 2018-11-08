@@ -1,0 +1,71 @@
+Comandos básicos:
+
+touch nome_arquivo -> criar um arquivo simples
+ls -l -> lista as permissões 
+chmod -> modifica as permissões 
+chmod -R -> modifica as permissões de forma recursiva (herança)
+
+File Server (permissões de pasta)
+
+##################################################################################
+[nome da pasta]
+path = /caminho completo da pasta
+read only = yes/no (permissão de leitura e/ou leitura e escrita)
+valid users = usuario1, usuario2, etc (usuários válidos)
+invalid users = usuario1, usuario2, etc (usuários inválidos)
+read list = usuario1, usuario2, etc (usuários com permissão somente leitura)
+write list = usuario1, usuario2, etc (usuários com permissão de leitura e escrita)
+##################################################################################
+
+### No final do arquivo smb.conf acrescentar:
+
+[publica]
+path = /home/publica
+read only = no
+
+
+Servidor de impressão - CUPS
+apt-get update
+apt-get install cups
+
+*** Administração via servidor WEB
+ip:631
+
+Configurações de acesso
+
+vi /etc/cups/cupsd.conf
+Abaixo da linha 16 acrescentar:
+Listen 192.168.0.1:631 (ip do servidor)
+Linhas 31 e 36
+Acrescentar abaixo de Order allow, deny
+Allow all
+### salvar, sair
+### reiniciar o cups
+service cups restart
+
+Adicionando uma impressora
+apt-get install cups-pdf
+*** driver Linux -> generico -> cups-pdf
+    driver Windows -> generic -> Publisher Imagesetter
+
+reiniciar o cups e o samba
+
+
+
+Antivírus
+
+### Baixar um arquivo de teste
+wget https://secure.eicar.org/eicar.com.txt
+https://secure.eicar.org/eicar.com
+
+apt-get install clamav
+apt-get install clamav-daemon
+
+obs: site oficial> clamav.net
+
+clamscan -V (versão do antivirus)
+freshclam (atualizar o antivirus)
+
+clamscan -r -i / (scanear o linux inteiro)
+clamscan -r -i /home (scanear o home)
+clamscan -r -i --remove /home (scanear e remover vírus do diretório home)

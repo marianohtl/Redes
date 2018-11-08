@@ -1,0 +1,27 @@
+Atividade:
+
+1) Instalar o debian 9.5 (configurar na VM a rede no modo NAT)
+*** Nome do servidor: seu nome
+*** Só instalar o sistema básico e o acesso remoto ssh
+
+2) Pós instalação:
+Mudar a configuração da rede da VM para o modo bridge 
+Configurar o ip fixo 
+10.26.44.x (x-> definido pelo professor)
+Testar a internet "pingando" um site externo 
+
+Testar a rede local (real ping -> virtual) 
+
+Testar o acesso remoto (ssh) com  o putty 
+
+Atualizar o repositório 
+
+Instalar o vim 
+
+Instalar o linux logo 
+
+Personalizar a mensagem de boas vindas 
+
+personalizar a resolução para 800x60 
+
+

@@ -1,0 +1,81 @@
+File Sever - Instalação
+
+Passo 1:
+Planejar o servidor de arquivos:
+- pasta pessoal
+
+Passo 2:
+Criar ou importar do AD os usuários Windows
+Ex: bill, linus e jobs
+
+Passo 3:
+Criar ou importar do AD os usuários Linux
+adduser bill
+adduser linus
+adduser jobs
+
+Obs:
+chfn usuario (alterar informações básicas do usuário)
+userdel usuário (apagar usuário)
+passwd usuário (alterar a senha do usuário)
+ATENÇÃO !!!
+passwd (altera a senha do root)
+
+Passo 4:
+Instalar o samba (serviço de servidor de arquivos)
+apt-get update
+apt-get install samba
+systemctl status smbd
+systemctl status nmbd
+
+Passo 5: 
+Cadastrar os usuários no samba
+smbpasswd -a bill
+smbpasswd -a linus
+smbpasswd -a jobs
+
+
+Passo 6:
+Editar o arquivo smb.conf
+cd /etc/samba
+cp smb.conf smb.conf.bkp
+vi smb.conf
+Linha 29 Modificar o nome para o grupo de trabalho do windows
+!!! Atenção:
+No Windows e no Linux(samba) deixar o mesmo nome de grupo de trabalho
+Linha 193 Modificar para:
+read only = no
+salvar e sair
+
+Passo 7:
+testparm (verificar a sintaxe do script)
+systemctl restart smbd
+systemctl restart nmbd
+
+Passo 8:
+logar com o usuário cadastrado:
+acessar o servidor pelo ip 192.168.0.1 ou pesquisar rede
+mapear unidade de rede
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

@@ -1,0 +1,79 @@
+Montando um pen drive no Linux:
+
+Passo 1:
+lsusb -> verifica os dispositivos usb
+
+Passo 2:
+fdisk -l -> identificar os dispositivos (HD, USB, etc)
+
+Passo 3: 
+# Montar o pendrive no diretório mnt
+mount /dev/sdb1 /mnt
+
+# Para desmontar o pendrive:
+umount /dev/sdb1
+
+
+________________________________________________________
+Comandos básicos:
+mv -> mover ou renomear um arquivo
+lspci -> verificar dispositivos PCI (hardware)
+hostnamectl -> informações básicas do servidor
+uname -a -> versão do kernel do linux
+
+
+________________________________________________________
+Administração do servidor:
+cd /proc
+cat version
+cat cpuinfo | less
+free -m -t (verificar uso da memória)
+df -h (verificar uso do disco)
+top ("gerenciador de tarefas")
+ps -a (identificar os processos)
+kill -15 PID (encerrar o processo)
+kill -9 PID (matar o processo)
+
+cd /var/log (logs do sistema)
+cat messages | less
+tail -f syslog (monitoramento em tempo real)
+
+______________________________________________________
+Atualização do servidor
+ATENÇÃO !!!
+- Fazer backup antes
+- Testar em um abiente fora da produção
+
+apt-get -u full-upgrade
+
+_________________________________________________________
+
+Montagem do servidor WEB
+LAMP (Linux + APACHE + MySQl + php)
+wordpress
+
+Apache:
+
+apt-get install apache2
+systemctl status apache2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

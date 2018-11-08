@@ -1,0 +1,30 @@
+Comandos básicos:
+
+mkdir -> cria um diretório
+mkdir -p -> cria uma estrutura de diretório
+mkdir . -> cria um driretório oculto
+ls -a -> lista arquivos e diretórios comuns e ocultos
+rm -r -> apagar um diretório
+rm -rf -> apagar tudo SEM DÓ NEM PIEDADE
+
+___________________________________________________________
+
+Personalizando o GRUB
+*** Evitar modificações no GRUB
+
+cd /etc/default
+cp grub grub.bkp
+vim grub
+#descomentar a linha 23
+#acrescentar a linha 24:
+GRUB_GFXPAYLOAD_LINUX=800x600
+salvar, sair
+update-grub
+reboot
+
+
+
+
+
+
+

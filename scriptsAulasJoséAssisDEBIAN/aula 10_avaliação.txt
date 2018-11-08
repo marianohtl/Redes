@@ -1,0 +1,32 @@
+Atividade de avaliação (individual)
+
+Montar o cenário indicado na figura.
+
+WEB Server:
+- Instalar o Wordpress
+- Instalar um tema para Intranet
+
+Servidor de banco de dados:
+- Instalar o MySQL da Oracle
+- Criar um banco de dados com o nome dbtorres
+
+File Server:
+- Criar 4 usuários (torres, bete, secretaria e boy)
+*** usar senha padrão 123@senac para todos
+- Criar uma pasta pessoal para todos os usuários (permissão de escrita)
+- Criar uma pasta publica com permissão de escrita para todos os usuários,
+  não permitindo o usuário boy de acessar esta pasta
+- Criar uma pasta diretoria com acesso permitido somente ao usuário torres
+- Criar uma pasta processos com permissão somente leitura aos usuários boy
+  e secretaria e permissão de escrita  aos usuários torres e bete(advogados).
+- Criar uma impressora de rede PDF para todos os usuários
+- Criar uma impressora de rede modelo HP LaserJet 5100 para todos os usuários
+- Instalar um antivirus
+
+Estação Windows:
+- Acessar a intranet (wordpress)
+- Instalar o Workbench e acessar o banco de dados dbtorres
+- Criar os usuários (torres, bete, secretaria e boy) e mapear pastas e
+  impressoras
+
+ 

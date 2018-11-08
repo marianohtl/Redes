@@ -1,0 +1,62 @@
+Linux Server
+
+# -> Super usuário (administrador)
+$ -> usuário comum
+~ -> diretório padrão do usuário
+__________________________________________________
+
+Comandos básicos:
+su -> transforma o usuário em super usuário
+
+cd -> vai para um diretório
+cd.. -> retorna um nível
+cd <enter> -> vai para o diretório padrão do usuário
+
+q ou <ctrl><c> -> sair 
+
+pwd -> verifica o diretório atual
+
+ls -> listar arquivos e diretórios
+ls --color -> exibe cores no usuário root
+
+clear -> limpar a tela (ctrl l)
+
+date -> verifica data e hora
+cal -> calendário
+
+exit -> deslogar
+reboot ou shutdown -r now -> reiniciar
+shutdown - h now -> desligar o servidor
+
+____________________________________________
+
+systemctl (gerenciador de serviços no Linux)
+systemctl status ssh
+systemctl restart ssh
+systemctl stop ssh
+systemctl start ssh
+
+______________________________________________
+
+Verificar ip no Linux
+ip address
+ip add
+ip a
+
+__________________________________________________
+
+Cores e significados:
+
+azul escuro -> diretório
+branco -> arquivo de texto(comum)
+azul ciano (claro) -> link
+amarelo -> arquivo de driver(hardware)
+verde -> executável
+vermelho -> pacote
+magenta (rosa) -> arquivo gráfico)
+
+__________________________________________________
+
+Terminais:
+6 terminais tty1 ... tty6
+<alt><F2>...<F6> (mudar de terminal)

@@ -1,0 +1,88 @@
+Montagem passo a passo de um servidor WEB
+- LAMP (Linux + APACHE + MySQl + php)
+- wordpress
+
+Apache:
+apt-get install apache2
+systemctl status apache2
+
+MySQL:
+apt-get install mysql-server (mariadb)
+systemctl status mysql
+mysql_secure_installation
+(pressionar enter ou entrar com a senha do root)
+- alterar a senha do root (root do banco de dados)
+y (yes) para todas as questões (reforçar a segurança)
+*** Neste case (LAMP) o MySQL irá trabalhar de forma local
+________________________________________________________
+Acessar o mysql
+myslq -u root -p
+<ctrl><l> -> limpar a tela
+show databases; (listar os bancos)
+# Criar um banco chamado wordpress (será usado no wordpress)
+create database wordpress; 
+# Criar um usuário e senha para manipular o banco de dados
+create user 'admin'@localhost identified by '123456';
+select User,host from mysql.user;
+# Associar o usuário ao banco wordpress
+grant all privileges on wordpress.* to 'admin'@localhost;
+flush privileges;
+<ctrl><d> -> sair
+
+PHP
+php -v
+apt-get install php7.0
+apt-get install php7.0-mysql
+apt-get install phpmyadmin
+
+systemctl restart apache2
+php -v
+
+_____________________________________________________________
+Wordpress ("O cara")
+
+# Passo 1:
+# Fazer o download do wordpress no servidor
+wget http://wordpress.org/latest.tar.gz
+
+# Passo 2:
+# Descompactar
+tar -xzvf latest.tar.gz
+
+# Passo 3:
+# No diretório onde foi extraído o wordpress
+# Copiar, sincronizando permissões para a pasta html
+rsync -avP wordpress/ /var/www/html
+cd /var/www/html
+ls -l (verifica as permissões)
+
+# Passo 4:
+# alterar o "dono" e o "grupo" para o usuário apache
+chown -R www-data:www-data /var/www/html
+
+# Passo 5:
+# acessar o servidor pelo navegador web
+- Seguir as instruções do aplicativo
+
+Problemas:
+cp wp-config-sample.php wp-config.php
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
