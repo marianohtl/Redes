@@ -1,0 +1,81 @@
+###################################
+##				 ##
+##	Instalando o PFSENSE	 ##
+##				 ##
+###################################
+
+#########################################################################################################
+#													#
+#	> Download ISO PFSENSE										#
+#	ISO PF SENSE - COMPACTADA (descompactar)							#
+#													#
+#########################################################################################################
+
+
+#########################################################################################################
+#													#
+#	Virtual Box											#
+#													#
+#	Criar:												#
+#	Máquina Virtual											#
+#	BSD												#
+#	FreeBDS 64bits											#
+#	1 giga ram (suficiente para os principais serviços de firewall e proxy para uma rede pequena)   #
+#													#
+#													#
+#	-HD												#
+#	Criar Disco VDI - HD ( o pfSense ocupa menos de um giga)					#
+#													#
+#	- PROCESSADOR											#
+#	Habilitar Nucleos de processador								#
+#	Habilitar PAE NX										#
+#													#
+#	- MONITOR											#
+#	>> Aumentar memória vídeo									#
+#	>> Habilitar aceleração 3D									#
+#													#
+#	>> Desabilitar Audio										#
+#													#
+#	Rede												#
+#	- Adaptador 1 											#
+#	MODO BRIDGE - CONECTADO WAN 									#
+#	(adaptador para navegar com a internet - CONEXÃO WAN - 						#
+#	conexão direta com a rede local enp6s0) 							#
+#													#
+#													#
+#	- Adaptador 2											#
+#	REDE INTERNA - CONECTADO LAN									#
+#	(adaptador 2 - rede interna - como se fosse a LAN)						#
+#													#
+#########################################################################################################
+
+
+
+#########################################################################################################
+#													#
+#	INSTALAÇÃO PFSENSE										#
+#													#
+#	>>> 1 - INSTALL	X										#
+#	2 - RECOVER (recuperação pfsense em modo shell)							#
+#	3 OPTION - config.xml (arquivo pré configurados de recover - instalação desassistida)		#
+#													#
+#													#
+#	Seleção do teclado:										#
+#	Brasil com Acento										#
+#													#
+#	Teclado Modelo abnt2										#
+#													#
+#	MODO DE PARTICIONAMENTO:									#									#
+#	sistemas de arquivos: 										#
+#	UFS ZFS (para o padrão freebsd , ideais para trabalho com cargas ou tráfego pesado de rede)	#
+#	INDICADO TRABALHOR UFS MODO GUIADO ( ele cria todas as partições necessárias )			#
+#	>>> UFS MODO AUTOMÁTICO										#
+#													#
+#	MODIFICAÇÕES MODO MANUAL SHELL:									#
+#	>>NO												#
+#													#
+#	>> DESMONTE O CD DO VB PARA NÃO REINSTALAR							#
+#													#
+#	- verificar se identifica interfaces de rede:							#
+#													#
+#########################################################################################################
