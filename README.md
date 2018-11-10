@@ -27,4 +27,3 @@ https://marianohtl.github.io/Redes/RedesLinux/Aula08.11.2018/index.html
 
 Ingressando Linux no Domínio:
 
-https://marianohtl.github.io/Redes/RedesLinux/IngressandoLinuxMintDomain/index.html
