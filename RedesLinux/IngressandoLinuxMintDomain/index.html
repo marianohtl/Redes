@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>AULA 09-11-2018</title>
+  <style>
+
+  body{
+    margin: 0 auto;
+    width: 100% ;
+    display:flex;
+    background-color: lightgoldenrodyellow;
+    margin-left: 10px;
+  }
+
+  img{
+    width: 800px;
+    height: 600px;
+    margin: 20px ;
+    
+  }
+
+  div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+.imagens{
+    width: 100%;
+    height: 100%px;
+    position: relative;
+    left: 200px;
+  }
+
+  li{
+    font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 8px;
+
+  }
+
+  </style>
+</head>
+<body>
+<div>
+  <div>
+    <h1>COMO ingressar o Linux Mint 19 Tara no DOMÍNIO do ACTIVE DIRECTORY</h1>
+    <h2>https://www.youtube.com/watch?v=R_1VUVXt7kA&t=263s</h2>
+  </div>
+<h2>Soluções:</h2>
+  <div>
+<p> ARQUIVO  pbisconfig (para ingressar linux mint)</p>
+</div>
+<div>
+<p> Solução centrify -> (para ubunto - caso deseje instalar no mint há necessidade de alterações e arquivos confs)</p>
+</div>
+<div>
+<p> método manual - ubunto e mint</p>
+<p> Procedimento manual de ingressar máquinas no domínio: https://www.starwindsoftware.com/blog...</p>
+<p> - desenvolvido na linguegem shell ou utilizando arquivos</p> 
+<p> SOFTWARE CID (para ingressar máquinas linux no domínio)</p>
+    Tem ambiente gráfico e pode ser usado por linha de comando. Permite ingressar máquinas utilizando o código fonte e tem suporte para várias plataformas diferentes. Ele permite que pelo nosso controlador de domínio (tanto no Samba quanto no WSerever) possamos customizar scripts de logon
+    desenvolvido na linguagem shell ou usando arquivos xml, permite também fazer a instalação automática das impressoras utilizando srv Cups. 
+</p>
+</div>
+
+
+
+
+<p>
+  <ol>
+      <li>Verificar versão do linux e tipo do sistema (64/32).</li>
+      <li>Verificar se o samba , DNS e o servidor de DHCP estão instalados e configurados corretamente.</li>
+      <li>if config </li>
+      <p>(verificar ip)</p>
+      <li>route -n</li>
+      <p>(quem é o gateway)</p>
+      <li>cat /etc/resolv.conf</li>
+      <p>(Verificar quais são os Srvs DNS: este arquivo mostra quais são os principais), no linux mint ele consulta um DNS em local.host e depois faz a pesquisa no dominínio, resolv.conf é associado ao arquivo interface. Configurações de rede para ver os detalhes da rede.</p>
+      <li> Verificar se pingamos o nosso domínio  (ping nome do domínio) </li>
+      <p>(ele tem que responder e trazer o nome fqdn do servidor)</p> 
+      <li>nslookup </li>
+      <p>Para verificar se a tradução do domínio está sendo feita corretamente.</p>
+      <li>Gerenciador de Arquivos > cntrl + l + smb (protocolo de compartilhamento de pastas do windows utilizado pelo samba4)</li>
+      <li>smb://ipdoSRV</li> 
+      <p>(precisamos que ele liste todas as pastas compartilhadas, principalmente sysvol e o netlogon</p>
+      <li>VERIFICAR E ANOTAR O NOME DA MÁQUINA (arquivo de configuração /etc/hostname)</li>
+      <p>- Antes de ingressar no domínio configurar a máquina, 
+          ALTERAR NOME DA MÁQUINA hostname e em hosts (ponteiro do loopback)</p>          
+  </ol>
+  
+
+        
+         <h2> - Para instalarmos cliente do Sid: </h2> 
+      <ul>
+            <li> sudo apt update</li>
+            <li> sudo apt upgrade</li>
+            <li> sudo apt dist-upgrade (manter o kernel atualizado e todas as aplicações)</li>
+            <li> sudo apt autoremove (remover todos os softwares desnecessários)</li>
+      </ul>
+           
+           <h2>Acesse o site do CID</h2>
+          <p>  
+            CID Closed in Directory: https://sourceforge.net/projects/c-i-d/
+            > FILES
+          </p>
+          <p>  
+            Podesmos utilizar o código fonte, baixá-lo e fazer a compilação.
+            No caso do Linux Mint, podemos utilizar o ppa do próprio projeto.
+          </p>
+      <ul>
+          <li> sudo add-apt-repository ppa:emoraes25/cid (adicionando o ppa) </li>
+          <li> sudo apt update (atualizar as listas do apt pois o novo ppa faz partes das listas)</li>
+          <li> sudo apt-get install cid cid-gtk (instalando os dois aplicativos, o cid por linha de comando e o cid-gtk que é o ambiente gráfico)</li>
+          <li>ENTRAMOS NA PARTE DA CONFIGURAÇÃO DO KERBERUS (TÍCKETS DE ATUALIZAÇÃO DO DOMÍNIO)
+            o nome realm tem que ser em letra maiúscula  (acho que é LITAH.LOCAL)</li> 
+          <li>sudo cid-gtk (tela de configuração para ingressar a máquina no domínio)</li>
+      </ul> 
+    </p>
+    <div class="imagens">
+            <img src="img/cid-gtk-confCid.png">
+            <img src="img/cid-gtk-nomeMaquina.png">
+            <img src="img/hosts&hostname.png">
+            <img src="img/68.jpg">
+            <img src="img/69.jpg">
+    </div>
+
+      <ul>           
+        <li>Todas as formas de instalar software no GNU/Linux:</li>
+        <p>https://www.youtube.com/watch?v=j2-AE...</p>
+        <li> BeyondTrust - PBIS-Open:</li>
+        <p>https://github.com/BeyondTrust/pbis-o...</p>
+        <li> Vídeo mostrando sua instalação nas versões antigas:</li>
+        <p>https://www.youtube.com/watch?v=lLbvl...</p>           
+        <li> Centrify Express:</li>
+        <p>https://www.centrify.com/express/linu...</p>
+        <li> Vídeo mostrando sua instalação nas versões antigas:</li>           
+        <p>https://www.youtube.com/watch?v=jtP-R...</p>
+        <li>Procedimento manual de ingressar máquinas no domínio:</li>
+        <p>https://www.starwindsoftware.com/blog...</p>
+        <li>UCS Univention Client:</li>
+        <p>https://github.com/univention/univent...</p>
+        <li>CID Closed in Directory:</li>
+        <p>https://sourceforge.net/projects/c-i-d/</p>
+      </ul> 
+
+</div>  
+</body>
+</html>
