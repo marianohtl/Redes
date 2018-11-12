@@ -1,0 +1,15 @@
+#Desafio de hoje: 12/11/2018
+1. Instalar o GNU/Linux Ubuntu 18.04.1 LTS;
+2. Configurar o endereço IP: 172.16.XXX.30/24;
+3. Configurar o hostname: cloud.seu_domínio.local
+4. Utilizar o Github para analisar e estudar os script de instalação:
+	Clonar meu projeto para o seu Github: vaamonde/ubuntu-1804
+	LAMP-Server:	Apache2, MySQL, PHP, Perl e Python;
+	Wordpress:		Apache2, MySQL e PHP;
+	Webmin:			Perl e Python;
+	Netdata:		Perl e Python;
+	LogAnalyzer:	PHP e Perl;
+	Docker:			DESENVOLVENDO AINDA....
+5. Criar regras de acesso remoto no pfSense (NAT Port Forward);
+6. Testar conexões internas e validar o ambiente;
+7. Testar conexões externas e validar o ambiente.

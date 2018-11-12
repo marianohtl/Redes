@@ -1,0 +1,29 @@
+# ifconfig					172.16.XXX.XXX/24
+# ping google.com
+# sudo apt update
+# sudo apt upgrade
+# sudo apt dist-upgrade		-> sudo apt full-upgrade
+# sudo apt autoremove
+# sudo apt autoclean
+===================================================
+hostname	/etc/hostname
+hosts		/etc/hosts
+interfaces	/etc/network/interfaces
+			sudo lspci
+			sudo lshw -class network
+			sudo ifconfig enp0s3
+			sudo route -n
+			sudo cat /etc/resolv.conf
+			sudo ifdown enp0s3
+			sudo ifdown enp0s3
+			sudo vim /etc/network/interfaces
+				iface enp0s3 inet static
+				address 172.16.XXX.20
+				netmask 255.255.255.0
+				network 172.16.XXX.0
+				gateway 172.16.XXX.254
+				broadcast 172.16.XXX.255
+				dns-nameservers 172.16.XXX.10
+				dns-domain vaamonde.local
+				dns-search vaamonde.local
+			sudo ifup enp0s3

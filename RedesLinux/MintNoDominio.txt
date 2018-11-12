@@ -1,0 +1,28 @@
+﻿#Desafio Final:
+	
+Colocar o GNU/Linux Mint no Domínio utilizando o CID Closed In Directory
+	
+Testar se logando no Domínio com os Usuários criados no AD-DS
+	
+Acessar o compartilhamento do SAMBA via Naultis (Gerenciador de Arquivos)
+smb://172.16.XXX.10 - 
+Fazer o mesmo procedimento do Windows (Criar Pasta e Arquivos)
+
+#Linux Mint no Domínio do AD-DS
+sudo add-apt-repository ppa:emoraes25/cid && sudo apt update
+sudo apt install cid cid-gtk
+KERBEROS:	SEUDOMINIO.LOCAL
+sudo apt install vim
+sudo vim /etc/hostname
+	desktop-lm19
+sudo vim /etc/hosts
+	127.0.1.1	desktop-lm19
+sudo reboot
+sudo cid-gtk
+	Join in Domain
+		Domain: 	vaamonde.local
+		User:		administrator
+		Password:	123@senac
+		OU:			Deixar o padrão
+		Mode:		Default
+		Join

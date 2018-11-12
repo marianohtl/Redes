@@ -1,0 +1,19 @@
+Fazer a documentação dps Servoços de Redes já Implementados, PrintScreen em arquivo do Word mais descrição da imagem.
+
+PfSense: Configurações de Rede;
+         Configurações de Hostname;
+		 Configurações de SSH e Console;
+		 
+UCS Univention: Configurações de Rede;
+                Configurações de Hostname;
+				Configurações de Domain;
+				Configurações de DHCP;
+				
+Ubuntu Server: Configurações de Rede;
+               Configurações de Hostname;
+			   Configurações de hosts e Domain;
+			   Configurações de LAMP-Server.
+			   
+Tste de Domain: Ping, NsLookup, \\IP_HOSTNAME.
+
+Windows 7 ou Mint: Teste de Serviços de Rede e Acesso ao Domain;

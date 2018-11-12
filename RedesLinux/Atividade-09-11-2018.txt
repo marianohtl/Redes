@@ -1,0 +1,22 @@
+﻿#Atividade de hoje 09/11/2013
+01. Finalizar a criação de Todos os Usuários;
+02. Ingressar Màquinas GNU/Linux Mint no Domínio; (Script na Rede)
+03. Criar os Grupos Domínio Local na OU-compartilhamentos;
+	ACL-gestao-R
+	ACL-gerencia-RW
+	ACL-coordenação-RW
+04. Ingressar os Grupos Globais no Grupos Domínio Local;
+	GG-gerencia	--> ACL-gestao-R
+	GG-gerencia --> ACL-gerencia-RW
+	GG-coordenação --> ACL-gestao-R
+	GG-coordenação --> ACL-coordenação-RW
+05. Remover o Grupos Domain Users de todos os usuários;
+06. Criar o diretório Gestão e seus sub-diretórios;
+	mkdir /seu_domínio.local/gestao
+	mkdir /seu_domínio.local/gestao/gerencia
+	mkdir /seu_domínio.local/gestao/coordenação
+07. Compartilhar a Pasta Gestão no UCS Univention;
+08. Aplicar as Permissões de Compartilhamento e Disco na Pasta Gestão;
+09. Quebrar a herança das Pastas Gerencia e Coordenação;
+10. Aplicar as Permissões de Disco nas Pastas Gerencia e Coordenação;
+11. Testar as permissões.
