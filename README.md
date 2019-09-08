@@ -29,3 +29,7 @@ Ingressando Linux no Domínio:
 
 https://marianohtl.github.io/Redes/RedesLinux/IngressandoLinuxMintDomain/index.html
 
+
+- - - - - 
+Ubunto18.04
+Script de automatização de instalação de serviços de rede no GNU/Linux Ubuntu Server 18.04.x LTS
