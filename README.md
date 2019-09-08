@@ -33,3 +33,8 @@ https://marianohtl.github.io/Redes/RedesLinux/IngressandoLinuxMintDomain/index.h
 - - - - - 
 Ubunto18.04
 Script de automatização de instalação de serviços de rede no GNU/Linux Ubuntu Server 18.04.x LTS
+- - - -
+
+Ubunto-Master
+
+Scripts de automatização de instalação de serviços. Documentação PFSENSE, USC UNIVENTION E SRV UBUNTO
